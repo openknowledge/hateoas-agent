@@ -6,11 +6,13 @@ This project implements an AI agent designed to autonomously explore and interac
 In order to test the agent, we need a HATEOAS compatible API to interact with. You can use i.e. [Spring Restbucks](https://github.com/odrotbohm/spring-restbucks).
 ```
 git clone https://github.com/odrotbohm/spring-restbucks.git
-cd spring-restbucks/server
+cd spring-restbucks
+git reset --hard d215c68534505822f637a328eb7485c246c95041
+cd server
 mvn clean package
 java -jar target/*.jar
 ```
-After starting Spring Restbucks you can use the HAL-Explorer to add some data (i.e. drinks or orders) if you like.
+After starting Spring Restbucks you can use the HAL-Explorer to add some data (i.e. drinks or orders) if you like. If url of the API is not `http://localhost:8080/`, please update the variable `ENTRY_POINT` in `prompts.py`.
 
 ## Start AI Agent
 1. We use [openai-agents](https://github.com/openai/openai-agents-python) library. Therefore you have to set the `OPENAI_API_KEY` environment variable.
