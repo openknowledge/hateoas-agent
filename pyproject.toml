@@ -1,0 +1,11 @@
+[project]
+name = "hateoas-agent"
+version = "0.1.0"
+description = "This project implements an AI agent designed to autonomously explore and interact with RESTful APIs that follow the HATEOAS constraint."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "openai-agents>=0.0.14",
+    "pydantic>=2.11.4",
+    "requests>=2.32.3",
+]
